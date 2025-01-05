@@ -1,0 +1,1 @@
+export { default as resumeService } from './resume.service';
