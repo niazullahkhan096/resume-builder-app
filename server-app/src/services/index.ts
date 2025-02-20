@@ -1,1 +1,1 @@
-export { default as resumeService } from './resume.service';
+export { default as LatexService } from './latex.service';

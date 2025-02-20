@@ -1,1 +1,1 @@
-export { default as resumeController } from './resume.controller';
+export { default as ResumeController } from './resume.controller';
