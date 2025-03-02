@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{imports/altacv}
+
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\iftutex
+  % If using xelatex or lualatex:
+  \setmainfont{Lato}
+\else
+  % If using pdflatex:
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{VividPurple}{HTML}{3E0097}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+% \colorlet{tagline}{PastelRed}
+\colorlet{heading}{VividPurple}
+\colorlet{headingrule}{VividPurple}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{VividPurple}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+% ...and the markers for the date/location for \cvevent
+% \renewcommand{\cvDateMarker}{\faCalendar*[regular]}
+% \renewcommand{\cvLocationMarker}{\faMapMarker*}
+
+
+\input{imports/pubs-num.tex}
+
+
+\addbibresource{imports/sample.bib}
+
+\begin{document}
+
+\name{Atharva Khaire}
+\tagline{}
+
+\personalinfo{
+  \email{test@gmail.com}
+  \phone{1234567890}
+  \mailaddress{abc}
+  \linkedin{google.com}
+  \github{github.com}
+  \printinfo{\faLanguage}{English, Hindi}
+}
+
+\makecvheader
+
+\columnratio{0.6}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Professional Summary}
+
+\begin{itemize}
+\item Proficient in leveraging AWS cloud services to design and implement scalable data solutions, enhancing operational efficiency and reducing costs.
+\item Skilled in developing and deploying applications using Langchain and Langgraph, driving innovation in data processing and analysis.
+\end{itemize}
+
+\cvsection{Experience}
+
+\cvevent{AI Data Engineer}{Oro AI}{2025-01-06 -- 2025-01-10}{Remote}
+\begin{itemize}
+\item Developed and implemented robust data pipelines using Airflow to automate workflows, ensuring timely and accurate data processing across various platforms.
+Leveraged AWS services to design and deploy scalable cloud-based solutions, optimizing resource utilization and enhancing system performance.
+\end{itemize}
+
+\divider
+
+\medskip
+
+\cvsection{Education}
+
+\cvevent{MS in ADA}{BU}{2025-01-06 -- 2025-01-10}{}
+
+\divider
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Certifications}
+
+\cvevent{abc}{xyz}{2025-01-08}{}
+
+\divider
+
+
+\cvsection{Skills}
+
+\cvtag{AWS}
+\cvtag{Langchain}
+\cvtag{Airflow}
+\cvtag{Python}
+\cvtag{MongoDB}
+\cvtag{SQL}
+\cvtag{Pinecone}
+
+\medskip
+
+\cvsection{Achievements}
+
+\begin{itemize}
+\item Achieved a specialization in Advanced Data Analytics (ADA), demonstrating a strong foundation in data-driven decision-making and analytical skills essential for a career in data science.
+\item Completed coursework in Python programming, equipping with the ability to develop robust data analysis tools and automate processes, aligning with industry standards.
+\item Gained proficiency in AWS, enhancing cloud computing skills necessary for deploying scalable data solutions and managing large datasets effectively.
+\item Studied PySpark, enabling the ability to handle big data processing and analytics, which is crucial for roles focused on data engineering and analysis.
+\item Explored Langchain, fostering skills in building applications that utilize language models, preparing for innovative roles in AI and machine learning.
+\item Consistently maintained a high academic performance, reflecting dedication and a strong work ethic, which are vital for success in fast-paced professional environments.
+\end{itemize}
+
+\medskip
+
+\end{paracol}
+\end{document}
